@@ -42,9 +42,15 @@ data/*.json
 
 # 课程提供资料 —— 本地保留，不入库（体积大 + 非本人成果）
 data/raw_pdfs/
-data/extracted/
 docs/course/
 *.pptx
+
+# 解析产物：图片体积大不入库，但 jsonl（含 VLM 标注）必须入库——
+# 标注是逐张看图写的硬工作量，丢了无法重来。
+data/extracted/*/images/
+data/extracted/_annot/
+data/extracted/_probe/
+data/extracted/_dbg/
 
 # Vector store
 vectorstore/

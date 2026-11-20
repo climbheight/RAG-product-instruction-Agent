@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "doc_id": "midea_mb_fb40e551",
+    "file": "美的_MB-FB40E551_智能电饭煲.pdf",
+    "product": "MB-FB40E551 智能电饭煲",
+    "pages": 17,
+    "chars": 8122,
+    "text_blocks": 56,
+    "figures": 5,
+    "figure_sources": {
+      "raster": 0,
+      "vector": 0,
+      "page-scan": 5
+    },
+    "inline_icons_dropped": 0,
+    "multi_column_pages": 0,
+    "ocr_pages": 17,
+    "figures_with_nearby": 5,
+    "figures_with_inner_text": 3,
+    "figures_with_search_text": 5,
+    "chunks": 22,
+    "chunks_with_figures": 5,
+    "avg_chunk_chars": 441.3,
+    "chunk_chars_min": 306,
+    "chunk_chars_max": 478,
+    "elapsed_sec": 37.4
+  },
+  "pages": [
+    {
+      "page": 1,
+      "n_text_blocks": 1,
+      "n_figures": 2,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 12,
+      "note": "scan: regions=3 figs=2 toc=0 borders=0"
+    },
+    {
+      "page": 2,
+      "n_text_blocks": 1,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 213,
+      "note": "scan: regions=1 figs=0 toc=0 borders=1"
+    },
+    {
+      "page": 3,
+      "n_text_blocks": 4,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 380,
+      "note": "scan: regions=4 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 4,
+      "n_text_blocks": 1,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 558,
+      "note": "scan: regions=1 figs=0 toc=0 borders=1"
+    },
+    {
+      "page": 5,
+      "n_text_blocks": 4,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 629,
+      "note": "scan: regions=4 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 6,
+      "n_text_blocks": 1,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 559,
+      "note": "scan: regions=1 figs=0 toc=0 borders=1"
+    },
+    {
+      "page": 7,
+      "n_text_blocks": 5,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 750,
+      "note": "scan: regions=5 figs=0 toc=0 borders=1"
+    },
+    {
+      "page": 8,
+      "n_text_blocks": 3,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 471,
+      "note": "scan: regions=3 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 9,
+      "n_text_blocks": 6,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 303,
+      "note": "scan: regions=6 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 10,
+      "n_text_blocks": 2,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 581,
+      "note": "scan: regions=3 figs=1 toc=0 borders=0"
+    },
+    {
+      "page": 11,
+      "n_text_blocks": 4,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 1066,
+      "note": "scan: regions=4 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 12,
+      "n_text_blocks": 3,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 403,
+      "note": "scan: regions=3 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 13,
+      "n_text_blocks": 3,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 754,
+      "note": "scan: regions=3 figs=0 toc=0 borders=1"
+    },
+    {
+      "page": 14,
+      "n_text_blocks": 12,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 614,
+      "note": "scan: regions=12 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 15,
+      "n_text_blocks": 4,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 534,
+      "note": "scan: regions=5 figs=1 toc=0 borders=1"
+    },
+    {
+      "page": 16,
+      "n_text_blocks": 0,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 0,
+      "note": "scan: regions=1 figs=1 toc=0 borders=1"
+    },
+    {
+      "page": 17,
+      "n_text_blocks": 2,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 295,
+      "note": "scan: regions=2 figs=0 toc=0 borders=1"
+    }
+  ]
+}

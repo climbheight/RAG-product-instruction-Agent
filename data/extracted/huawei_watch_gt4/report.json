@@ -1,0 +1,630 @@
+{
+  "stats": {
+    "doc_id": "huawei_watch_gt4",
+    "file": "华为_WATCH_GT4.pdf",
+    "product": "WATCH GT4 智能手表",
+    "pages": 60,
+    "chars": 38194,
+    "text_blocks": 1761,
+    "figures": 12,
+    "figure_sources": {
+      "raster": 12,
+      "vector": 0,
+      "page-scan": 0
+    },
+    "inline_icons_dropped": 85,
+    "multi_column_pages": 0,
+    "ocr_pages": 0,
+    "figures_with_nearby": 12,
+    "figures_with_inner_text": 0,
+    "figures_with_search_text": 12,
+    "chunks": 101,
+    "chunks_with_figures": 7,
+    "avg_chunk_chars": 462.1,
+    "chunk_chars_min": 328,
+    "chunk_chars_max": 479,
+    "elapsed_sec": 1.0
+  },
+  "pages": [
+    {
+      "page": 1,
+      "n_text_blocks": 41,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 308,
+      "note": ""
+    },
+    {
+      "page": 2,
+      "n_text_blocks": 36,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 297,
+      "note": ""
+    },
+    {
+      "page": 3,
+      "n_text_blocks": 18,
+      "n_figures": 2,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 490,
+      "note": ""
+    },
+    {
+      "page": 4,
+      "n_text_blocks": 16,
+      "n_figures": 2,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 351,
+      "note": ""
+    },
+    {
+      "page": 5,
+      "n_text_blocks": 15,
+      "n_figures": 2,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 325,
+      "note": ""
+    },
+    {
+      "page": 6,
+      "n_text_blocks": 25,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 771,
+      "note": ""
+    },
+    {
+      "page": 7,
+      "n_text_blocks": 30,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 544,
+      "note": ""
+    },
+    {
+      "page": 8,
+      "n_text_blocks": 27,
+      "n_figures": 0,
+      "n_inline_icons": 3,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 508,
+      "note": ""
+    },
+    {
+      "page": 9,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 613,
+      "note": ""
+    },
+    {
+      "page": 10,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 658,
+      "note": ""
+    },
+    {
+      "page": 11,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 712,
+      "note": ""
+    },
+    {
+      "page": 12,
+      "n_text_blocks": 30,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 829,
+      "note": ""
+    },
+    {
+      "page": 13,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 755,
+      "note": ""
+    },
+    {
+      "page": 14,
+      "n_text_blocks": 27,
+      "n_figures": 0,
+      "n_inline_icons": 3,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 695,
+      "note": ""
+    },
+    {
+      "page": 15,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 704,
+      "note": ""
+    },
+    {
+      "page": 16,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 3,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 787,
+      "note": ""
+    },
+    {
+      "page": 17,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 759,
+      "note": ""
+    },
+    {
+      "page": 18,
+      "n_text_blocks": 8,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 207,
+      "note": ""
+    },
+    {
+      "page": 19,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 854,
+      "note": ""
+    },
+    {
+      "page": 20,
+      "n_text_blocks": 20,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 886,
+      "note": ""
+    },
+    {
+      "page": 21,
+      "n_text_blocks": 19,
+      "n_figures": 0,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 660,
+      "note": ""
+    },
+    {
+      "page": 22,
+      "n_text_blocks": 12,
+      "n_figures": 1,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 250,
+      "note": ""
+    },
+    {
+      "page": 23,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 3,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 637,
+      "note": ""
+    },
+    {
+      "page": 24,
+      "n_text_blocks": 23,
+      "n_figures": 2,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 553,
+      "note": ""
+    },
+    {
+      "page": 25,
+      "n_text_blocks": 25,
+      "n_figures": 1,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 705,
+      "note": ""
+    },
+    {
+      "page": 26,
+      "n_text_blocks": 30,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 825,
+      "note": ""
+    },
+    {
+      "page": 27,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 786,
+      "note": ""
+    },
+    {
+      "page": 28,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 6,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 727,
+      "note": ""
+    },
+    {
+      "page": 29,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 720,
+      "note": ""
+    },
+    {
+      "page": 30,
+      "n_text_blocks": 37,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 912,
+      "note": ""
+    },
+    {
+      "page": 31,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 740,
+      "note": ""
+    },
+    {
+      "page": 32,
+      "n_text_blocks": 30,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 827,
+      "note": ""
+    },
+    {
+      "page": 33,
+      "n_text_blocks": 18,
+      "n_figures": 1,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 526,
+      "note": ""
+    },
+    {
+      "page": 34,
+      "n_text_blocks": 6,
+      "n_figures": 1,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 250,
+      "note": ""
+    },
+    {
+      "page": 35,
+      "n_text_blocks": 32,
+      "n_figures": 0,
+      "n_inline_icons": 9,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 673,
+      "note": ""
+    },
+    {
+      "page": 36,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 750,
+      "note": ""
+    },
+    {
+      "page": 37,
+      "n_text_blocks": 34,
+      "n_figures": 0,
+      "n_inline_icons": 4,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 694,
+      "note": ""
+    },
+    {
+      "page": 38,
+      "n_text_blocks": 35,
+      "n_figures": 0,
+      "n_inline_icons": 3,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 720,
+      "note": ""
+    },
+    {
+      "page": 39,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 867,
+      "note": ""
+    },
+    {
+      "page": 40,
+      "n_text_blocks": 26,
+      "n_figures": 0,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 745,
+      "note": ""
+    },
+    {
+      "page": 41,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 611,
+      "note": ""
+    },
+    {
+      "page": 42,
+      "n_text_blocks": 26,
+      "n_figures": 0,
+      "n_inline_icons": 1,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 675,
+      "note": ""
+    },
+    {
+      "page": 43,
+      "n_text_blocks": 32,
+      "n_figures": 0,
+      "n_inline_icons": 2,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 814,
+      "note": ""
+    },
+    {
+      "page": 44,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 837,
+      "note": ""
+    },
+    {
+      "page": 45,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 501,
+      "note": ""
+    },
+    {
+      "page": 46,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 1077,
+      "note": ""
+    },
+    {
+      "page": 47,
+      "n_text_blocks": 32,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 479,
+      "note": ""
+    },
+    {
+      "page": 48,
+      "n_text_blocks": 34,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 515,
+      "note": ""
+    },
+    {
+      "page": 49,
+      "n_text_blocks": 34,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 515,
+      "note": ""
+    },
+    {
+      "page": 50,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 528,
+      "note": ""
+    },
+    {
+      "page": 51,
+      "n_text_blocks": 33,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 523,
+      "note": ""
+    },
+    {
+      "page": 52,
+      "n_text_blocks": 54,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 843,
+      "note": ""
+    },
+    {
+      "page": 53,
+      "n_text_blocks": 48,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 746,
+      "note": ""
+    },
+    {
+      "page": 54,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 444,
+      "note": ""
+    },
+    {
+      "page": 55,
+      "n_text_blocks": 28,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 442,
+      "note": ""
+    },
+    {
+      "page": 56,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 479,
+      "note": ""
+    },
+    {
+      "page": 57,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 460,
+      "note": ""
+    },
+    {
+      "page": 58,
+      "n_text_blocks": 31,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 461,
+      "note": ""
+    },
+    {
+      "page": 59,
+      "n_text_blocks": 45,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 955,
+      "note": ""
+    },
+    {
+      "page": 60,
+      "n_text_blocks": 27,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": false,
+      "chars": 669,
+      "note": ""
+    }
+  ]
+}

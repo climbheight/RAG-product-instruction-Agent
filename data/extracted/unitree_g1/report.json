@@ -1,0 +1,300 @@
+{
+  "stats": {
+    "doc_id": "unitree_g1",
+    "file": "宇树_G1_官方手册页面图像_离线汇编.pdf",
+    "product": "G1 人形机器人",
+    "pages": 27,
+    "chars": 8306,
+    "text_blocks": 182,
+    "figures": 56,
+    "figure_sources": {
+      "raster": 0,
+      "vector": 0,
+      "page-scan": 56
+    },
+    "inline_icons_dropped": 0,
+    "multi_column_pages": 0,
+    "ocr_pages": 27,
+    "figures_with_nearby": 56,
+    "figures_with_inner_text": 30,
+    "figures_with_search_text": 56,
+    "chunks": 22,
+    "chunks_with_figures": 16,
+    "avg_chunk_chars": 443.2,
+    "chunk_chars_min": 277,
+    "chunk_chars_max": 479,
+    "elapsed_sec": 70.5
+  },
+  "pages": [
+    {
+      "page": 1,
+      "n_text_blocks": 2,
+      "n_figures": 2,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 65,
+      "note": "scan: regions=4 figs=2 toc=0 borders=0"
+    },
+    {
+      "page": 2,
+      "n_text_blocks": 1,
+      "n_figures": 7,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 11,
+      "note": "scan: regions=8 figs=7 toc=0 borders=0"
+    },
+    {
+      "page": 3,
+      "n_text_blocks": 21,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 963,
+      "note": "scan: regions=21 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 4,
+      "n_text_blocks": 12,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 521,
+      "note": "scan: regions=13 figs=1 toc=0 borders=0"
+    },
+    {
+      "page": 5,
+      "n_text_blocks": 8,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 441,
+      "note": "scan: regions=8 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 6,
+      "n_text_blocks": 2,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 302,
+      "note": "scan: regions=2 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 7,
+      "n_text_blocks": 1,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 33,
+      "note": "scan: regions=1 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 8,
+      "n_text_blocks": 3,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 179,
+      "note": "scan: regions=4 figs=1 toc=0 borders=0"
+    },
+    {
+      "page": 9,
+      "n_text_blocks": 5,
+      "n_figures": 5,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 213,
+      "note": "scan: regions=10 figs=5 toc=0 borders=0"
+    },
+    {
+      "page": 10,
+      "n_text_blocks": 9,
+      "n_figures": 4,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 378,
+      "note": "scan: regions=13 figs=4 toc=0 borders=0"
+    },
+    {
+      "page": 11,
+      "n_text_blocks": 7,
+      "n_figures": 2,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 201,
+      "note": "scan: regions=9 figs=2 toc=0 borders=1"
+    },
+    {
+      "page": 12,
+      "n_text_blocks": 17,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 742,
+      "note": "scan: regions=17 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 13,
+      "n_text_blocks": 2,
+      "n_figures": 4,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 94,
+      "note": "scan: regions=6 figs=4 toc=0 borders=0"
+    },
+    {
+      "page": 14,
+      "n_text_blocks": 4,
+      "n_figures": 3,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 188,
+      "note": "scan: regions=7 figs=3 toc=0 borders=0"
+    },
+    {
+      "page": 15,
+      "n_text_blocks": 3,
+      "n_figures": 4,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 135,
+      "note": "scan: regions=7 figs=4 toc=0 borders=0"
+    },
+    {
+      "page": 16,
+      "n_text_blocks": 2,
+      "n_figures": 3,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 72,
+      "note": "scan: regions=5 figs=3 toc=0 borders=0"
+    },
+    {
+      "page": 17,
+      "n_text_blocks": 3,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 282,
+      "note": "scan: regions=3 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 18,
+      "n_text_blocks": 8,
+      "n_figures": 5,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 346,
+      "note": "scan: regions=13 figs=5 toc=0 borders=5"
+    },
+    {
+      "page": 19,
+      "n_text_blocks": 6,
+      "n_figures": 4,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 270,
+      "note": "scan: regions=10 figs=4 toc=0 borders=6"
+    },
+    {
+      "page": 20,
+      "n_text_blocks": 7,
+      "n_figures": 4,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 285,
+      "note": "scan: regions=11 figs=4 toc=0 borders=2"
+    },
+    {
+      "page": 21,
+      "n_text_blocks": 8,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 428,
+      "note": "scan: regions=8 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 22,
+      "n_text_blocks": 9,
+      "n_figures": 3,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 515,
+      "note": "scan: regions=12 figs=3 toc=0 borders=0"
+    },
+    {
+      "page": 23,
+      "n_text_blocks": 6,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 195,
+      "note": "scan: regions=7 figs=1 toc=0 borders=0"
+    },
+    {
+      "page": 24,
+      "n_text_blocks": 18,
+      "n_figures": 2,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 747,
+      "note": "scan: regions=20 figs=2 toc=0 borders=0"
+    },
+    {
+      "page": 25,
+      "n_text_blocks": 11,
+      "n_figures": 1,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 429,
+      "note": "scan: regions=12 figs=1 toc=0 borders=0"
+    },
+    {
+      "page": 26,
+      "n_text_blocks": 7,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 271,
+      "note": "scan: regions=7 figs=0 toc=0 borders=0"
+    },
+    {
+      "page": 27,
+      "n_text_blocks": 0,
+      "n_figures": 0,
+      "n_inline_icons": 0,
+      "n_columns": 1,
+      "ocr_used": true,
+      "chars": 0,
+      "note": "scan: regions=0 figs=0 toc=0 borders=0"
+    }
+  ]
+}

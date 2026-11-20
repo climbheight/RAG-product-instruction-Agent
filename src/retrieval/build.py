@@ -31,7 +31,13 @@ def load_jsonl(path: str) -> list[dict]:
 
 
 def collect() -> tuple[list[dict], list[dict]]:
-    """汇总所有 doc 的 chunks 与 figures。"""
+    """汇总所有 doc 的 chunks 与 figures。
+
+    图片侧会剔除两类：
+      1. VLM 标注时判定为「无效图块」的（页眉线残片、二维码、品牌 Logo、
+         以及被误判成图的纯文字块）——标注本身就是一次质量审查；
+      2. search_text 为空的（没有任何可检索信号，进库只会污染召回）。
+    """
     chunks: list[dict] = []
     figures: list[dict] = []
     if not os.path.isdir(EXTRACTED):
@@ -41,7 +47,13 @@ def collect() -> tuple[list[dict], list[dict]]:
         if not os.path.isdir(d) or name.startswith("_"):
             continue
         chunks.extend(load_jsonl(os.path.join(d, "chunks.jsonl")))
-        figures.extend(load_jsonl(os.path.join(d, "figures.jsonl")))
+        for f in load_jsonl(os.path.join(d, "figures.jsonl")):
+            cap = (f.get("vlm_caption") or "")
+            if cap.startswith("无效图块"):
+                continue
+            if not (f.get("search_text") or "").strip():
+                continue
+            figures.append(f)
     return chunks, figures
 
 

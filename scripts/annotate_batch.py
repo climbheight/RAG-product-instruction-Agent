@@ -59,13 +59,18 @@ def main() -> int:
               % (total, done, total - done, 100.0 * done / max(total, 1)))
         by_doc: dict[str, list[int]] = {}
         for r in rows:
+            if (r.get("duplicate_of") or "").strip():
+                continue                      # 重复图不计入分母
             a, t = by_doc.setdefault(r["_doc"], [0, 0])
             by_doc[r["_doc"]] = [a + (1 if (r.get("vlm_caption") or "").strip() else 0), t + 1]
         for d, (a, t) in sorted(by_doc.items()):
             print("  %-28s %3d/%-3d" % (d, a, t))
         return 0
 
-    todo = [r for r in rows if not (r.get("vlm_caption") or "").strip()]
+    # 跳过重复图：duplicate_of 已在 dedup_figures.py 里判定，只读代表图
+    todo = [r for r in rows
+            if not (r.get("vlm_caption") or "").strip()
+            and not (r.get("duplicate_of") or "").strip()]
     if not args.all:
         todo.sort(key=lambda r: len(r.get("search_text") or ""))
     batch = todo[args.offset: args.offset + args.limit]

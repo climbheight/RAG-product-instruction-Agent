@@ -51,6 +51,8 @@ def collect() -> tuple[list[dict], list[dict]]:
             cap = (f.get("vlm_caption") or "")
             if cap.startswith("无效图块"):
                 continue
+            if (f.get("duplicate_of") or "").strip():
+                continue                      # 重复图只留代表，避免同一张图占多个召回位
             if not (f.get("search_text") or "").strip():
                 continue
             figures.append(f)

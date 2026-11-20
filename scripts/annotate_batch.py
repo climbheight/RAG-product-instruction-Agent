@@ -53,8 +53,10 @@ def main() -> int:
     args = ap.parse_args()
 
     rows = collect(args.doc)
-    total = len(rows)
-    done = sum(1 for r in rows if (r.get("vlm_caption") or "").strip())
+    # 重复图不计入分母（它们继承代表图的描述，不需要单独标注）
+    uniq = [r for r in rows if not (r.get("duplicate_of") or "").strip()]
+    total = len(uniq)
+    done = sum(1 for r in uniq if (r.get("vlm_caption") or "").strip())
 
     if args.status:
         print("总图数: %d   已标注: %d   剩余: %d (%.0f%%)"

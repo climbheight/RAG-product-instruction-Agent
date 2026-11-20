@@ -48,6 +48,8 @@ def main() -> int:
     ap.add_argument("--offset", type=int, default=0)
     ap.add_argument("--status", action="store_true")
     ap.add_argument("--all", action="store_true", help="不按弱度排序，按原顺序")
+    ap.add_argument("--cols", type=int, default=3, help="拼图列数，2 表示 2x2 高清")
+    ap.add_argument("--cell", type=int, default=340, help="每格边长像素，600 为高清")
     args = ap.parse_args()
 
     rows = collect(args.doc)
@@ -94,7 +96,7 @@ def main() -> int:
 
     out = os.path.join(OUT, "batch_%s_%03d.png"
                        % (args.doc or "all", args.offset))
-    make_montage(items, out, cols=3, cell=340)
+    make_montage(items, out, cols=args.cols, cell=args.cell)
     print("montage:", out)
     print("映射:")
     print(json.dumps(mapping, ensure_ascii=False, indent=2))

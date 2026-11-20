@@ -1,0 +1,98 @@
+{
+  "OPPO_ColorOS_给长辈的玩机指南.pdf": {
+    "doc_id": "oppo_coloros_guide",
+    "brand": "OPPO",
+    "product": "ColorOS 手机（长辈玩机指南）",
+    "category": "手机"
+  },
+  "TP-LINK_WiFi6_无线路由器.pdf": {
+    "doc_id": "tplink_wifi6_router",
+    "brand": "TP-LINK",
+    "product": "WiFi6 无线路由器",
+    "category": "网络设备"
+  },
+  "创想三维_Ender3_V3_SE_中文用户手册.pdf": {
+    "doc_id": "creality_ender3_v3se",
+    "brand": "创想三维",
+    "product": "Ender-3 V3 SE 3D 打印机",
+    "category": "3D打印"
+  },
+  "华为_Pura70_Ultra_HarmonyOS5_中文用户指南.pdf": {
+    "doc_id": "huawei_pura70_ultra",
+    "brand": "华为",
+    "product": "Pura 70 Ultra（HarmonyOS 5）",
+    "category": "手机"
+  },
+  "华为_WATCH_GT4.pdf": {
+    "doc_id": "huawei_watch_gt4",
+    "brand": "华为",
+    "product": "WATCH GT4 智能手表",
+    "category": "穿戴设备"
+  },
+  "大疆_DJI_Mic2_中文用户手册.pdf": {
+    "doc_id": "dji_mic2",
+    "brand": "大疆",
+    "product": "DJI Mic 2 无线麦克风",
+    "category": "影像设备"
+  },
+  "大疆_Mini_4_Pro.pdf": {
+    "doc_id": "dji_mini4pro",
+    "brand": "大疆",
+    "product": "Mini 4 Pro 无人机",
+    "category": "影像设备"
+  },
+  "大疆_Osmo_Action_5_Pro.pdf": {
+    "doc_id": "dji_osmo_action5pro",
+    "brand": "大疆",
+    "product": "Osmo Action 5 Pro 运动相机",
+    "category": "影像设备"
+  },
+  "大疆_Osmo_Pocket_3.pdf": {
+    "doc_id": "dji_osmo_pocket3",
+    "brand": "大疆",
+    "product": "Osmo Pocket 3 口袋云台相机",
+    "category": "影像设备"
+  },
+  "奔图_P3300系列_中文用户指南.pdf": {
+    "doc_id": "pantum_p3300",
+    "brand": "奔图",
+    "product": "P3300 系列激光打印机",
+    "category": "办公设备"
+  },
+  "宇树_G1_官方手册页面图像_离线汇编.pdf": {
+    "doc_id": "unitree_g1",
+    "brand": "宇树",
+    "product": "G1 人形机器人",
+    "category": "机器人"
+  },
+  "石头_G10S_Pro.pdf": {
+    "doc_id": "roborock_g10s_pro",
+    "brand": "石头",
+    "product": "G10S Pro 扫地机器人",
+    "category": "家电"
+  },
+  "美的_MB-FB40E551_智能电饭煲.pdf": {
+    "doc_id": "midea_mb_fb40e551",
+    "brand": "美的",
+    "product": "MB-FB40E551 智能电饭煲",
+    "category": "家电"
+  },
+  "联想_ThinkPad_X1_Carbon_Gen12.pdf": {
+    "doc_id": "lenovo_thinkpad_x1c_g12",
+    "brand": "联想",
+    "product": "ThinkPad X1 Carbon Gen 12 笔记本",
+    "category": "电脑"
+  },
+  "问界_M9_智能座舱与车辆操作_官方手册章节摘录.pdf": {
+    "doc_id": "aito_m9_cockpit",
+    "brand": "问界",
+    "product": "M9 智能座舱与车辆操作",
+    "category": "汽车"
+  },
+  "问界_M9_辅助驾驶与泊车_官方手册章节摘录.pdf": {
+    "doc_id": "aito_m9_adas",
+    "brand": "问界",
+    "product": "M9 辅助驾驶与泊车",
+    "category": "汽车"
+  }
+}

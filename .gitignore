@@ -51,6 +51,9 @@ vectorstore/
 *.faiss
 *.pkl
 
+# 本地模型权重（体积大，按 README 说明下载）
+models/
+
 # Logs
 logs/
 *.log

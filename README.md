@@ -70,22 +70,65 @@ RAG-product-instruction-Agent/
 python -m venv .venv && source .venv/Scripts/activate   # Windows Git Bash
 pip install -r requirements.txt
 
-# 2. 建库（读取 data/raw_pdfs/ → 写入 vectorstore/）
-python -m src.ingestion.build_index
+# 2. 模型权重（bge-small-zh-v1.5，约 96MB）
+#    放到 models/bge-small-zh-v1.5/，需含：
+#    config.json  model.safetensors  tokenizer.json  vocab.txt
+#    1_Pooling/config.json（必须含 "embedding_dimension": 512）
+#    也可不下载，代码会回落到 HF 仓库名自动拉取
 
-# 3. 启动
+# 3. 建库（解析 → 切分 → 落盘）
+python -m src.ingestion.build_index          # 全部 16 份，含 OCR 约 5 分钟
+python -m src.ingestion.build_index --only roborock_g10s_pro   # 单份调试
+
+# 4. 建向量索引（文本 + 图片双 collection）
+python -m src.retrieval.build
+
+# 5. 启动（任务二/四完成后）
 python -m app.main
 ```
 
+## 当前进度
+
+| 阶段 | 状态 | 产物 |
+| --- | --- | --- |
+| 手册解析 + 切分 | 完成 | 16 份 / 1242 页 / 1928 chunks |
+| 图片抽取 | 完成 | 874 张（位图 / 矢量渲染 / 扫描页区块） |
+| 扫描页版面切分 | 完成 | 宇树 G1、美的电饭煲共 61 个图区 |
+| BGE 嵌入 + 双索引 | 完成 | `manual_chunks` 1928 + `manual_figures` 874 |
+| 图文二次检索 | 完成 | 答案生成后在单产品范围内精排 Top-2 |
+| VLM 图片标注 | 进行中 | 11 / 874 |
+| LangGraph 链路 | 待做 | — |
+| Gradio 界面 | 待做 | — |
+
+## 图片检索的设计要点
+
+图片本身不能被 BGE 嵌入，所以每张图都要先变成一段文本（`search_text`）：
+
+```
+【产品名】章节 第N页插图。画面：<VLM描述> 说明：<邻近文本> 图中文字：<OCR/矢量取字>
+```
+
+四个必须踩对的点：
+
+1. **本语料几乎没有图注**（实测 5 份正式手册 `^图\s*\d+-\d+` 命中 0 次），
+   所以图文关联靠**空间邻近 + 阅读顺序 + 「如图/参见图」引用词**，不靠图注正则。
+2. **矢量图要单独取字**：石头 G10S Pro、大疆 Mic2 全篇是矢量插图，
+   `get_images()` 返回 0、OCR 也无从下手，必须用 `page.get_text(clip=bbox外扩)` 从文本层挖标签。
+3. **套话必须清洗**：「配图仅供参考，请以产品实际为准」紧贴图片，
+   空间邻近判据下必然胜出，不清掉会让所有图的向量高度相似、检索失效。
+4. **候选池必须锁死单个产品**：实测「怎么把机器人搬起来」会同时命中石头和宇树，
+   若把两个文档的图都放进池子，就会把宇树的充电图配给扫地机。
+
 ## 开发计划
 
-- [ ] 环境与依赖锁定（PyMuPDF / sentence-transformers / chromadb / langgraph / gradio）
-- [ ] PDF 解析：文本层检测，扫描页转 OCR 兜底
-- [ ] 图片抽取与章节关联（图注匹配）
-- [ ] 切分策略与参数实验（300~600 / overlap 50~100）
-- [ ] BGE 嵌入 + Chroma 建库，写入元数据
-- [ ] 固定问题集验证检索召回与图文对应
-- [ ] LangGraph 图搭建（retrieve → grade → generate → fallback）
+- [x] 环境与依赖锁定
+- [x] PDF 解析：文本层检测，扫描页 OCR 兜底
+- [x] 图片抽取：位图 / 矢量渲染 / 扫描页版面切分
+- [x] 切分策略（300~480 字符 / overlap 80）
+- [x] BGE 嵌入 + Chroma 双索引，写入元数据
+- [x] 图文二次检索（单产品候选池 + 阈值触发）
+- [ ] VLM 全量图片标注（11 / 874）
+- [ ] LangGraph 图搭建（retrieve → generate → retrieve_images → fallback）
 - [ ] MiniMind 本地推理接入
 - [ ] Gradio 界面（含图片放大、等待态、空输入提示）
 - [ ] 端到端测试记录（设备、环境、响应时间）

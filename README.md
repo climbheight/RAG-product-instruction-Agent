@@ -30,20 +30,26 @@
 ```
 RAG-product-instruction-Agent/
 ├── src/
-│   ├── ingestion/    # PDF 解析、图片抽取、清洗、切分、嵌入、建库
-│   ├── retrieval/    # 向量检索、Top-k 调参、图文关联回取
-│   ├── agent/        # LangGraph 图：状态、节点、条件边
-│   ├── llm/          # MiniMind 本地推理封装（待建）
-│   └── api/          # 服务层
-├── app/              # Gradio 界面（待建）
-├── configs/          # 配置（模型路径、切分参数、Top-k 等）
+│   ├── ingestion/        # PDF 解析、图片抽取、版面切分、切分、VLM 标注（9 个模块）
+│   ├── retrieval/        # BGE 嵌入、Chroma 双索引、图文二次检索
+│   ├── agent/            # LangGraph 图：状态、5 节点、2 条件边
+│   ├── llm/              # 本地推理封装：LLMBase / HFLocalLLM / MockLLM
+│   └── api/              # 服务层（预留）
+├── app/
+│   └── app.py            # Gradio 界面
+├── configs/
+│   └── manuals.json      # 16 份手册的 doc_id / 品牌 / 型号映射
 ├── data/
-│   ├── raw_pdfs/     # 16 份课程手册（.gitignore，本地保留）
-│   └── extracted/    # 解析产物：文本 / 图片（.gitignore）
+│   ├── raw_pdfs/         # 16 份课程手册（.gitignore，本地保留）
+│   └── extracted/        # 解析产物：chunks.jsonl / figures.jsonl / images/（图片 .gitignore）
 ├── docs/
-│   ├── course/       # 课程 PPT、任务书、指导书（.gitignore）
-│   └── ...           # 本项目文档
+│   ├── course/           # 课程 PPT、任务书、指导书（.gitignore）
+│   ├── annotation-requirements.md   # 图片标注规范
+│   └── annotation-handover.md       # 标注任务交接说明
+├── models/               # 本地模型权重（.gitignore）
+├── scripts/              # 探测脚本与标注工具
 ├── tests/
+├── vectorstore/          # Chroma 持久化（.gitignore）
 └── README.md
 ```
 
@@ -70,7 +76,7 @@ RAG-product-instruction-Agent/
 python -m venv .venv && source .venv/Scripts/activate   # Windows Git Bash
 pip install -r requirements.txt
 
-# 2. 模型权重（bge-small-zh-v1.5，约 96MB）
+# 2. 嵌入模型权重（bge-small-zh-v1.5，约 96MB）
 #    放到 models/bge-small-zh-v1.5/，需含：
 #    config.json  model.safetensors  tokenizer.json  vocab.txt
 #    1_Pooling/config.json（必须含 "embedding_dimension": 512）
@@ -80,12 +86,30 @@ pip install -r requirements.txt
 python -m src.ingestion.build_index          # 全部 16 份，含 OCR 约 5 分钟
 python -m src.ingestion.build_index --only roborock_g10s_pro   # 单份调试
 
-# 4. 建向量索引（文本 + 图片双 collection）
+# 4. 建向量索引（文本 + 图片双 collection，约 2 分钟）
 python -m src.retrieval.build
 
-# 5. 启动（任务二/四完成后）
-python -m app.main
+# 5. 启动界面
+python -m app.app                            # 打开 http://127.0.0.1:7860
 ```
+
+### 接入本地推理模型（必做，否则只有占位输出）
+
+当前 `models/` 下只有 BGE 嵌入模型，**没有生成模型**，链路会回落到 `MockLLM`。
+接真实模型二选一：
+
+```bash
+# 方案 A：MiniMind2（课程首选，权重 208MB）
+# 下载 jingyaogong/MiniMind2 的全部非 images/ 文件到 models/MiniMind2/
+
+# 方案 B：Qwen3-0.6B（课程允许的备选）
+# 下载 Qwen/Qwen3-0.6B 到 models/Qwen3-0.6B/
+```
+
+放好后 `load_llm()` 会自动扫描 `models/` 下第一个含 `config.json` 的非 bge 目录并加载；
+也可显式指定：`load_llm("models/MiniMind2")`。
+
+> 扫描页 OCR 需要 `rapidocr-onnxruntime`，首次运行会下载约 15MB 的模型。
 
 ## 当前进度
 
@@ -160,17 +184,48 @@ START → retrieve → grade ──不足──→ fallback → END
 
 ## 开发计划
 
+**任务一 · 离线建库**
 - [x] 环境与依赖锁定
-- [x] PDF 解析：文本层检测，扫描页 OCR 兜底
+- [x] PDF 解析：文本层检测，扫描页 OCR 兜底（55 页）
 - [x] 图片抽取：位图 / 矢量渲染 / 扫描页版面切分
-- [x] 切分策略（300~480 字符 / overlap 80）
-- [x] BGE 嵌入 + Chroma 双索引，写入元数据
+- [x] 图片去重：dHash + aHash + 像素差异三重判据，874 → 807
+- [x] 切分策略（300~480 字符 / overlap 80，图与说明绑成原子单元）
+- [x] BGE 嵌入 + Chroma 双索引，写入完整元数据
+- [x] VLM 图片标注 **807 / 807（100%）**
 - [x] 图文二次检索（单产品候选池 + 阈值触发）
-- [ ] VLM 全量图片标注（11 / 874）
-- [ ] LangGraph 图搭建（retrieve → generate → retrieve_images → fallback）
-- [ ] MiniMind 本地推理接入
-- [ ] Gradio 界面（含图片放大、等待态、空输入提示）
+
+**任务二 · Agent 链路**
+- [x] LangGraph 图：retrieve → grade → generate → retrieve_images，含 fallback
+- [x] 检索封装为可调用方法，节点间用 TypedDict 状态传递
+- [x] 无结果 / 空输入 / 异常三种兜底话术
+- [x] 召回阈值实测标定（0.56）
+- [ ] **接入 MiniMind 真实推理**（当前 MockLLM 占位）
+
+**任务四 · 界面**
+- [x] Gradio：问题输入 + 产品下拉 + 答案 + 图片画廊
+- [x] 检索详情折叠区（执行路径 / 命中片段 / 相似度 / 配图判定）
+- [x] 空输入提示、等待态、无图时正常显示
+- [ ] 图片点击放大（Gallery 已支持缩放，未做独立大图面板）
+
+**收尾**
 - [ ] 端到端测试记录（设备、环境、响应时间）
+- [ ] 固定问题集回归（≥ 20 题，覆盖 16 个产品）
+- [ ] 中期报告（2026-11-30）
+
+## 已验证 / 未验证
+
+诚实记录，避免把没测过的当已实现：
+
+| 项 | 状态 | 说明 |
+| --- | --- | --- |
+| 检索召回正确性 | ✅ 已验证 | 5 个相关问题 top-1 命中对应产品 |
+| 无关问题不硬答 | ✅ 已验证 | 6 个无关问题全部走 fallback |
+| 跨产品配图 | ✅ 已修复 | 候选池锁死 top-1 文档 |
+| 链路节点流转 | ✅ 已验证 | 4 类输入的执行路径符合预期 |
+| 界面构建 | ✅ 已验证 | 17 个产品选项，Blocks 构建成功 |
+| **回答质量** | ❌ **未验证** | 无真实模型，MockLLM 输出无意义 |
+| 图文配合准确度 | ❌ 未验证 | 需真实答案才能评估「用答案二次检索」的效果 |
+| CPU 推理速度 | ❌ 未测 | 待接入模型后实测 |
 
 ## 交付节点
 
